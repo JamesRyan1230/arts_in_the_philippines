@@ -1,0 +1,256 @@
+
+•	{
+  Padding: 0;
+  Margin: 0;
+  Box-sizing: border-box;
+  Font-family: “Poppins”, sans-serif;
+}
+
+:root {
+  /* Colors */
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #3b141c;
+  --secondary-color: #f3961c;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+
+  /* Font size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* Font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* Site max width */
+  --site-max-width: 1300px;
+}
+
+Html {
+  Scroll-behavior: smooth;
+}
+
+/* Stylings for whole site */
+Ul {
+  List-style: none;
+}
+
+A {
+  Text-decoration: none;
+}
+
+Button {
+  Cursor: pointer;
+  Background: none;
+  Border: none;
+}
+
+Img {
+  Width: 100%;
+}
+
+:where(section, footer) .section-content {
+  Margin: 0 auto;
+  Padding: 0 20px;
+  Max-width: var(--site-max-width);
+}
+
+Section .section-title {
+  Text-align: center;
+  Padding: 60px 0 100px;
+  Text-transform: uppercase;
+  Font-size: var(--font-size-xl);
+}
+
+Section .section-title::after {
+  Content: “”;
+  Width: 80px;
+  Height: 5px;
+  Display: block;
+  Margin: 10px auto 0;
+  Background: var(--secondary-color);
+  Border-radius: var(--border-radius-s);
+}
+
+/* Navbar styling */
+Header {
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+  background: var(--primary-color);
+}
+
+Header .navbar {
+  Display: flex;
+  Padding: 20px;
+  Align-items: center;
+  Margin: 0 auto;
+  Justify-content: space-between;
+  Max-width: var(--site-max-width);
+}
+
+.navbar .nav-logo .logo-text {
+  Color: var(--white-color);
+  Font-size: var(--font-size-xl);
+  Font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+  Gap: 10px;
+  Display: flex;
+}
+
+.navbar .nav-menu .nav-link {
+  Padding: 10px 18px;
+  Color: var(--white-color);
+  Font-size: var(--font-size-m);
+  Border-radius: var(--border-radius-m);
+  Transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  Color: var(--primary-color);
+  Background: var(--secondary-color);
+}
+
+.navbar :where(#menu-open-button, #menu-close-button) {
+  Display: none;
+}
+
+/* Hero section styling */
+.hero-section {
+  Min-height: 100vh;
+  Background: var(--primary-color);
+}
+
+.hero-section .section-content {
+  Display: flex;
+  Padding-top: 40px;
+  Align-items: center;
+  Min-height: 100vh;
+  Justify-content: space-between;
+}
+
+.hero-section .hero-details {
+  Color: var(--white-color);
+}
+
+.hero-section .hero-details .title {
+  Font-size: var(--font-size-xxl);
+  Color: var(--secondary-color);
+  Font-family: “Miniver”, sans-serif;
+}
+
+.hero-section .hero-details .subtitle {
+  Margin-top: 8px;
+  Max-width: 70%;
+  Font-size: var(--font-size-xl);
+  Font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details .description {
+  Max-width: 70%;
+  Margin: 24px 0 40px;
+  Font-size: var(--font-size-m);
+}
+
+.hero-section .hero-details .buttons {
+  Display: flex;
+  Gap: 23px;
+}
+
+.hero-section .hero-details .button {
+  Padding: 10px 26px;
+  Display: block;
+  Border: 2px solid transparent;
+  Border-radius: var(--border-radius-m);
+  Background: var(--secondary-color);
+  Color: var(--primary-color);
+  Font-size: var(--font-size-m);
+  Font-weight: var(--font-weight-medium);
+  Transition: 0.3s ease;
+}
+
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .button.contact-us {
+  Color: var(--white-color);
+  Border-color: var(--white-color);
+  Background: transparent;
+}
+
+.hero-section .hero-details .button.contact-us:hover {
+  Color: var(--primary-color);
+  Background: var(--secondary-color);
+  Border-color: var(--secondary-color);
+}
+
+.hero-section .hero-image-wrapper {
+  Max-width: 500px;
+  Margin-right: 30px;
+}
+
+/* About section styling */
+.about-section {
+  Padding: 120px 0;
+  Background: var(--light-pink-color);
+}
+
+.about-section .section-content {
+  Display: flex;
+  Gap: 50px;
+  Align-items: center;
+  Justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+  Height: 400px;
+  Width: 400px;
+  Object-fit: cover;
+  Border-radius: var(--border-radius-circle);
+}
+
+.about-section .about-details {
+  Max-width: 50%;
+}
+
+.about-section .about-details .section-title {
+  Padding: 0;
+}
+
+.about-section .about-details .text {
+  Line-height: 30px;
+  Margin: 50px 0 30px;
+  Text-align: center;
+  Font-size: var(--font-size-m);
+}
+
+.about-section .social-link-list {
+  Display: flex;
+  Gap: 25px;
+  Justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+  Color: var(--primary-color);
+  Font-size: var(--font-size-l);
+  Transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover {
+  Color: var(--secondary-color);
+}
+
+/* Menu section styling */
+.me

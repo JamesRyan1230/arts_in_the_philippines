@@ -1,0 +1,155 @@
+•	{
+  Margin: 0;
+  Padding: 0;
+  Box-sizing: border-box;
+}
+
+Body {
+  Font-family: Arial, sans-serif;
+  Line-height: 1.6;
+  Color: #333;
+  Background-color: #f9f9f9;
+}
+
+Header {
+  Background-color: #8b4513;
+  Color: white;
+  Text-align: center;
+  Padding: 2rem 0;
+}
+
+Header h1 {
+  Font-size: 2.5rem;
+  Margin-bottom: 0.5rem;
+}
+
+Header p {
+  Font-size: 1.2rem;
+}
+
+Nav {
+  Background-color: #6b3100;
+  Padding: 1rem;
+}
+
+Nav ul {
+  List-style: none;
+  Display: flex;
+  Justify-content: center;
+}
+
+Nav li {
+  Margin: 0 1rem;
+}
+
+Nav a {
+  Color: white;
+  Text-decoration: none;
+  Font-weight: bold;
+}
+
+Nav a:hover {
+  Text-decoration: underline;
+}
+
+/* Main content */
+.container {
+  Max-width: 1200px;
+  Margin: 0 auto;
+  Padding: 2rem;
+}
+
+Section {
+  Margin-bottom: 3rem;
+}
+
+H2 {
+  Color: #8b4513;
+  Margin-bottom: 1rem;
+  Border-bottom: 2px solid #8b4513;
+  Padding-bottom: 0.5rem;
+}
+
+P {
+  Margin-bottom: 1rem;
+}
+
+/* Art categories */
+.art-categories {
+  Display: flex;
+  Flex-wrap: wrap;
+  Gap: 2rem;
+  Margin-top: 2rem;
+}
+
+.art-card {
+  Flex: 1;
+  Min-width: 300px;
+  Border: 1px solid #ddd;
+  Border-radius: 5px;
+  Padding: 1rem;
+  Background-color: white;
+}
+
+.art-card h3 {
+  Color: #8b4513;
+  Margin-bottom: 0.5rem;
+}
+
+.art-card img {
+  Width: 100%;
+  Height: 200px;
+  Object-fit: cover;
+  Margin-bottom: 1rem;
+  Border-radius: 5px;
+}
+
+/* Famous artists */
+.artists {
+  Display: flex;
+  Flex-wrap: wrap;
+  Gap: 1.5rem;
+  Margin-top: 1.5rem;
+}
+
+.artist {
+  Flex: 1;
+  Min-width: 200px;
+  Text-align: center;
+}
+
+.artist img {
+  Width: 150px;
+  Height: 150px;
+  Border-radius: 50%;
+  Object-fit: cover;
+  Margin-bottom: 0.5rem;
+}
+
+/* Footer */
+Footer {
+  Background-color: #8b4513;
+  Color: white;
+  Text-align: center;
+  Padding: 1.5rem;
+  Margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  Nav ul {
+    Flex-direction: column;
+    Align-items: center;
+  }
+
+  Nav li {
+    Margin: 0.5rem 0;
+  }
+
+  .art-categories,
+  .artists {
+    Flex-direction: column;
+  }
+}
+
+
